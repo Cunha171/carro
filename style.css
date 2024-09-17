@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #A6C3AB;
+}
+
+.carro {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    animation: andar 5s linear infinite;
+}
+
+.carro-teto {
+    position: relative;
+    top: -13px;
+    left: 20px;
+    width: 160px;
+    height: 60px;
+    background-color: #3498db;
+    border-radius: 10px 10px 0 0;
+}
+
+.carro-corpo {
+    width: 200px;
+    height: 60px;
+    background-color: #2980b9;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+}
+
+.roda {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    bottom: -20px;
+}
+
+.roda.traseira {
+    left: 20px;
+}
+
+.roda.dianteira {
+    right: 20px;
+}
+
+@keyframes andar{
+    0% {
+        transform: translateX(-350px);
+    } 
+    100% {
+        transform: translateX(100vw);
+    }
+}
